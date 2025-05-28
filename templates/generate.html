@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<html>
+    <body class="body-home">
+        <script type="text/javascript" src="{{ url_for('static', filename = 'generate.js') }}"></script>
+        <script>
+        </script>
+
+
+        <div>
+            <div class="row">
+                <div class="col-3">
+                    <div id="subtitle">
+                        File Upload:
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group" id="add-book">
+                            <div class="col-12" id="form">
+                                <div class="row">
+                                    <div class="row">
+                                        Major and Subject:
+                                        <div id="name-error"></div>
+                                        <input id="major" name="major" type="text" class="form-control" placeholder="Major">
+                                        <input id="subject" name="subject" type="text" class="form-control" placeholder="Class name">
+                                        <div class="col-4">
+                                            <button id="submit-subject-btn" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <input id="file-upload" type="file" name="file" multiple/> 
+                                        <div class="col-4">
+                                            <button id="upload-files" type="submit">Upload</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="server-response">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="subtitle">
+                        Subject: 
+                        <div class="row">
+                            <div id="class-subject">
+                            
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="topic-list-row">
+                                <ol id="topics-list" type="1">
+    
+                                </ol>
+                            </div>
+                            <div class="col-5">
+                                <button id="topics-submit-btn" type="submit">Generate Actions</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div id="subtitle">
+                        Cheat Sheet:
+                    </div>
+                    <div class="row">
+                        <a id="download-link" href="#" role="button"></a>
+                        <div id="actions-sheet">
+                            <ol id="actions-list" type="1">
+
+                            </ol>
+                        </div>
+                        <div class="col-4">
+                            <button id="actions-submit-btn" type="submit">Generate Sheet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}
